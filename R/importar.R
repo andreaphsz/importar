@@ -1,0 +1,35 @@
+#' import/load packages as in Python, i.e., ``import package as alias''
+#'
+#' @param package Package name (unquoted).
+#' @param alias Alias (unquoted) for the package.
+#' @examples
+#' import(dplyr, d)
+#' df <- data.frame(a=1:3, b=4:6)
+#' df %>% d$filter(a == 2)
+import <- function(package, alias) {
+    if(missing(package) | missing(alias))
+        stop("All two arguments must be passed.", call. = FALSE)
+    pkg <- as.character(substitute(package))
+    library(pkg, character.only=TRUE)
+    assign(as.character(substitute(alias)), loadNamespace(pkg), inherits = TRUE)
+}
+
+#' import/load functions as in Python, i.e., ``from package import function as alias''
+#'
+#' @param package Package name (unquoted).
+#' @param fun Functon name (unquoted).
+#' @param alias Alias (unquoted) for the function.
+#' @examples
+#' import_fun(dplyr, filter, fil)
+#' df <- data.frame(a=1:3, b=4:6)
+#' fil(df, a == 2)
+import_fun <- function(package, fun, alias) {
+    if(missing(package) | missing(fun) | missing(alias))
+        stop("All three arguments must be passed.", call. = FALSE)
+    alias. <- as.character(substitute(alias))
+    fun. <- substitute(package:::fun)
+    assign(alias., eval(fun.), inherits = TRUE)
+}
+
+
+
