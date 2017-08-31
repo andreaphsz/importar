@@ -9,9 +9,10 @@
 import <- function(package, alias) {
     if(missing(package) | missing(alias))
         stop("All two arguments must be passed.", call. = FALSE)
-    pkg <- as.character(substitute(package))
-    library(pkg, character.only=TRUE)
-    assign(as.character(substitute(alias)), loadNamespace(pkg), inherits = TRUE)
+    package. <- as.character(substitute(package))
+    alias. <- as.character(substitute(alias))
+    library(package., character.only=TRUE)
+    assign(alias., loadNamespace(package.), inherits = TRUE)
 }
 
 #' import/load functions as in Python, i.e., ``from package import function as alias''
