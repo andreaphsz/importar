@@ -12,7 +12,7 @@ import <- function(package, alias) {
     package. <- as.character(substitute(package))
     alias. <- as.character(substitute(alias))
     library(package., character.only=TRUE)
-    assign(alias., loadNamespace(package.), inherits = TRUE)
+    base::assign(alias., loadNamespace(package.), inherits = TRUE)
 }
 
 #' import/load functions as in Python, i.e., ``from package import function as alias''
@@ -28,8 +28,8 @@ import_fun <- function(package, fun, alias) {
     if(missing(package) | missing(fun) | missing(alias))
         stop("All three arguments must be passed.", call. = FALSE)
     alias. <- as.character(substitute(alias))
-    fun. <- substitute(package:::fun)
-    assign(alias., eval(fun.), inherits = TRUE)
+    fun. <- substitute(package::fun)
+    base::assign(alias., eval(fun.), inherits = TRUE)
 }
 
 
