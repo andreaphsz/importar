@@ -14,7 +14,7 @@ devtools::install_github("andreaphsz/importar")
 
 ## Example
 
-This is an example which shows you how assign a short alias to the dplyr package.
+This is an example which shows you how to assign a short alias to the dplyr package.
 
 ``` r
 ## assign 'd' to dplyr and use dplyr functions by involving the '$' operator.
