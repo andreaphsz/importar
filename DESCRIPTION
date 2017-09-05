@@ -1,6 +1,6 @@
 Package: importar
 Type: Package
-Title: This Package Imports/Loads other Packages or Functions and Creates an Alias for them.
+Title: This Package Imports/Loads Other Packages or Functions and Creates an Alias for Them.
 Version: 0.1.0
 Author: Andrea Cantieni
 Maintainer: Andrea Cantieni <andrea.cantieni@phsz.ch>
