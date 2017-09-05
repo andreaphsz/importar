@@ -9,7 +9,7 @@ import_fun(package, fun, alias)
 \arguments{
 \item{package}{Package name (unquoted).}
 
-\item{fun}{Functon name (unquoted).}
+\item{fun}{Function name (unquoted).}
 
 \item{alias}{Alias (unquoted) for the function.}
 }

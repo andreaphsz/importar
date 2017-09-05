@@ -8,7 +8,7 @@
 #' df %>% d$filter(a == 2)
 import <- function(package, alias) {
     if(missing(package) | missing(alias))
-        stop("All two arguments must be passed.", call. = FALSE)
+        stop("Both arguments must be passed.", call. = FALSE)
     package. <- as.character(substitute(package))
     alias. <- as.character(substitute(alias))
     library(package., character.only=TRUE)
@@ -18,7 +18,7 @@ import <- function(package, alias) {
 #' import/load functions as in Python, i.e., ``from package import function as alias''
 #'
 #' @param package Package name (unquoted).
-#' @param fun Functon name (unquoted).
+#' @param fun Function name (unquoted).
 #' @param alias Alias (unquoted) for the function.
 #' @examples
 #' import_fun(dplyr, filter, fil)
