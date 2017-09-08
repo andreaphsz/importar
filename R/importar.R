@@ -1,4 +1,4 @@
-#' import/load packages as in Python, i.e., ``import package as alias''
+#' This function imports/loads packages as in Python, i.e., ``import package as alias''
 #'
 #' @param package Package name (unquoted).
 #' @param alias Alias (unquoted) for the package.
@@ -15,7 +15,7 @@ import <- function(package, alias) {
     base::assign(alias., loadNamespace(package.), inherits = TRUE)
 }
 
-#' import/load functions as in Python, i.e., ``from package import function as alias''
+#' This function imports/loads functions as in Python, i.e., ``from package import function as alias''
 #'
 #' @param package Package name (unquoted).
 #' @param fun Function name (unquoted).
