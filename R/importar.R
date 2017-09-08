@@ -28,8 +28,10 @@ import_fun <- function(package, fun, alias) {
     if(missing(package) | missing(fun) | missing(alias))
         stop("All three arguments must be passed.", call. = FALSE)
     alias. <- as.character(substitute(alias))
-    fun. <- substitute(package::fun)
-    base::assign(alias., eval(fun.), inherits = TRUE)
+    fun. <- as.character(substitute(fun))
+    package. <-  as.character(substitute(package))
+    fun.p <- utils::getFromNamespace(fun., package.)
+    base::assign(alias., fun.p, inherits = TRUE)
 }
 
 
