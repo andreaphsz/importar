@@ -1,6 +1,6 @@
 # importar
 
-The goal of importar is to prevent namespace conflicts by having loaded a lot of R packages. So importar makes it easy to assign a (short) alias to a package or a function.
+The goal of 'importar' is to prevent namespace conflicts by having loaded a lot of R packages. So 'importar' makes it easy to assign a (short) alias to a package or a function.
 
 ## Installation
 
