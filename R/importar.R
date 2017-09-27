@@ -11,7 +11,7 @@ import <- function(package, alias) {
         stop("Both arguments must be passed.", call. = FALSE)
     package. <- as.character(substitute(package))
     alias. <- as.character(substitute(alias))
-    library(package., character.only=TRUE)
+    base::suppressWarnings(library(package., character.only=TRUE))
     base::assign(alias., loadNamespace(package.), inherits = TRUE)
 }
 
