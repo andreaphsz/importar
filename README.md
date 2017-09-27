@@ -21,7 +21,7 @@ install.packages("importar")
 This is an example which shows you how to assign a short alias to the dplyr package.
 
 ``` r
-## assign 'd' to dplyr and use dplyr functions by involving the '$' operator.
+## assign 'd' to dplyr and use dplyr functions by invoking the '$' operator.
 import(dplyr, d)
 df <- data.frame(a=1:3, b=4:6)
 df %>% d$filter(a == 2)
