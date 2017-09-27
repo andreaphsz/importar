@@ -2,7 +2,7 @@
 % Please edit documentation in R/importar.R
 \name{import}
 \alias{import}
-\title{This function imports/loads packages as in Python, i.e., ``import package as alias''}
+\title{This function imports/loads packages as in 'Python', i.e., ``import package as alias''}
 \usage{
 import(package, alias)
 }
@@ -12,7 +12,7 @@ import(package, alias)
 \item{alias}{Alias (unquoted) for the package.}
 }
 \description{
-This function imports/loads packages as in Python, i.e., ``import package as alias''
+This function imports/loads packages as in 'Python', i.e., ``import package as alias''
 }
 \examples{
 import(dplyr, d)
