@@ -4,12 +4,16 @@ The goal of importar is to prevent namespace conflicts by having loaded a lot of
 
 ## Installation
 
-You can install importar from github with:
-
+You can install importar from GitHub with:
 
 ``` r
-# install.packages("devtools")
 devtools::install_github("andreaphsz/importar")
+```
+
+or from CRAN with:
+
+``` r
+install.packages("importar")
 ```
 
 ## Example
