@@ -1,7 +1,7 @@
 Package: importar
 Type: Package
 Title: Enables Importing/Loading of Packages or Functions While Creating an Alias for Them
-Version: 0.1.1
+Version: 0.1.2
 Author: Andrea Cantieni
 Maintainer: Andrea Cantieni <andrea.cantieni@phsz.ch>
 Description: Enables 'Python'-like importing/loading of packages or functions
